@@ -1,11 +1,10 @@
 #SingleInstance Force
 
 #Include %A_ScriptDir%/utils.ahk
-#Include %A_ScriptDir%/debug.ahk
-; #Include %A_ScriptDir%/custom-delete-keybindings.ahk
+#Include %A_ScriptDir%/custom-delete-keybindings.ahk
 #Include %A_ScriptDir%/input-source.ahk
 
-^Esc::ExitApp ; Exit script with Escape key
+^Esc::ExitApp 
 
 ;==================================o
 ;      Custom Modifier Remap       | 
@@ -18,15 +17,6 @@ $LCtrl::LAlt
 ; ; LShift::Space
 ; #If
 
-; Space Up:: 
-;  SetCapsLockState, Off 
-;  if (A_PriorKey = "Space" 
-;     and GetKeyState("Ctrl") = 0 
-;     and GetKeyState("Alt") = 0
-;     and GetKeyState("Shift") = 0) {
-;     Send { Space }
-;   }
-; Return
 ;----------------------------------o
 
 ;==================================o
@@ -67,13 +57,6 @@ IsNotDisableApps := AppName not in Code.exe
 ;----------------------------------o
 #If
   ;----------------------------------o
-
->!Tab::!F14
-; 兩個坑: 1)直接指定LAlt後不能再綁定<!w或<^w 2)f23/24可能不能運作 但f13 14可以 但shift+f2是可以的
-; 下語法綁定左Alt後，原本交換的Ctrl鍵直接不能動
-; ^w::Send, +{ F4 }
-
-; f23 f24 fails
 
 ;==================================o
 ;       Custom Cursor Shortcut     | 
