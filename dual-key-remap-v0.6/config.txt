@@ -2,4 +2,4 @@ remap_key=SPACE
 when_alone=SPACE
 with_other=SHIFT
 
-debug=1
+debug=0
